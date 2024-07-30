@@ -3,9 +3,9 @@ spring:
     name: rainfall
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/rainfall}
-    username: ${SPRING_DATASOURCE_USERNAME:ayaan}
-    password: ${SPRING_DATASOURCE_PASSWORD:ayaan}
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,8 +17,8 @@ spring:
     generate-ddl: true
   data:
     redis:
-      host: ${SPRING_REDIS_HOST:localhost}
-      port: ${SPRING_REDIS_PORT:6379}
+      host: ${SPRING_REDIS_HOST}
+      port: ${SPRING_REDIS_PORT}
   security:
     oauth2:
       client:
@@ -43,7 +43,7 @@ spring:
     secret: ${SPRING_JWT_SECRET}
     expiration: 3600000  # 토큰 만료 시간 (밀리초)
 
-springdoc: # Swagger ??
+springdoc:
   swagger-ui:
     path: /swagger-ui.html
     groups-order: DESC
