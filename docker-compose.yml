@@ -3,6 +3,7 @@ version: '3.8'
 services:
   app:
     build: .
+#    image: 211125355246.dkr.ecr.ap-northeast-2.amazonaws.com/rainfall:back
     command: ["./wait-for-it.sh", "db:3306", "--", "java", "-jar", "app.jar"]
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/rainfall
