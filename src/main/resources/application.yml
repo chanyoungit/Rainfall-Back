@@ -4,7 +4,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
 #    url: jdbc:mysql://db:3306/rainfall
-    url: jdbc:mysql://host.docker.internal:3306/rainfall
+#    url: jdbc:mysql://host.docker.internal:3306/rainfall
+    url: jdbc:mysql://43.200.165.138:3306/rainfall
     username: root
     password: 20375570
   #    password: seolseee4512! # ?? ????
@@ -18,7 +19,7 @@ spring:
     generate-ddl: true
   data:
     redis:
-      host: host.docker.internal
+      host: 43.200.165.138
       port: 6379 # redis? ?? ????
   security:
     oauth2:
